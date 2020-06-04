@@ -8,7 +8,6 @@ import numpy.linalg as la
 
 
 # Credit for this function goes to: https://towardsdatascience.com/total-least-squares-in-comparison-with-ols-and-odr-f050ffc1a86a
-
 def tls(X,y):
     if X.ndim == 1:
         n = 1 # the number of variable of X
@@ -58,7 +57,7 @@ for N in sample_size:
         PLS_slopes_dict[str(N)+'_'+str(S)] = PLS_slopes
         TLS_slopes_dict[str(N)+'_'+str(S)] = TLS_slopes
 
-# generate violin plot for each sample size. standard deviation pair
+# generate violin plot for each sample size-standard deviation pair
 for i,N in enumerate(sample_size): 
     for j,S in enumerate(stdev):
         fig, ax = plt.subplots(figsize=(5,5))
